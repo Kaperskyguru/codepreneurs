@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Weekly - {{title | default: "Home"}}</title>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f172a",
+              secondary: "#4F46E5",
+              tertiary: "#1e293b",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+
+      let isSidebarOpen = false;
+
+      function openSidebar() {
+        isSidebarOpen = !isSidebarOpen;
+
+        const sidebarWrapper = document.querySelector("#sidebar_wrapper");
+        const sidebar = document.querySelector("#sidebar");
+        if (!sidebar) return;
+
+        if (isSidebarOpen) {
+          sidebar.classList.add("open", "navbar_drawer");
+          sidebar.classList.remove("overflow-y-auto");
+          sidebar.style.maxWidth = ""; //('max-width')
+        } else sidebar.classList.remove("open", "navbar_drawer");
+      }
+    </script>
+
+    <style>
+      .layer h3 {
+        bottom: 0;
+        left: 14%;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .layer:hover h3 {
+        bottom: 10%;
+        opacity: 1;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <div class="h-full">
+      <header
+        class="fixed flex justify-center w-full top-0 left-0 mb-[80px] z-50 px-4 border-solid border-[#1e293b] border-b"
+      >
+        <nav
+          class="flex w-full items-center justify-between bg-[#0f172a] text-white p-3"
+        >
+          <div class="w-16">
+            <img
+              src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/f89b2662-103e-4d1a-b7d0-be7faf688586/thumb_BackendWeekly_logo.png"
+              alt="Backend Weekly Logo"
+            />
+          </div>
+
+          <div
+            class="flex-1 bg-[#0f172a] flex justify-center mx-5 bg-[#1e293b] rounded-md"
+          ></div>
+          <div class="justify-between my-3 gap-10 items-center hidden lg:flex">
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com"
+                class="flex gap-2'"
+              >
+                <span>Newsletter</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://masteringbackend.com/courses"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Courses</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com/c/products"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Products</span>
+              </a>
+            </div>
+
+            <span class="flex gap-10 items-center">
+              <div>
+                <a
+                  href="https://newsletter.masteringbackend.com"
+                  class="bg-secondary px-4 py-3 font-bold rounded-md text-[#fff]"
+                >
+                  Join 10K+ Engineers
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://app.masteringbackend.com/?ref=backend-weekly-website"
+                  target="_blank"
+                  class="border-secondary border border-outline px-4 py-3 font-bold rounded-md text-white"
+                >
+                  Learn Backend
+                </a>
+              </div>
+            </span>
+          </div>
+
+          <div class="lg:hidden block" @click="openSidebar()">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+                stroke="currentcolor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </nav>
+      </header>
+    </div>
+    {{ content }}
+  </body>
+</html>

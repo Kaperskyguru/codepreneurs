@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Weekly - Start</title>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f172a",
+              secondary: "#4F46E5",
+              tertiary: "#1e293b",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+
+    <style>
+      .layer h3 {
+        bottom: 0;
+        left: 14%;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .layer:hover h3 {
+        bottom: 10%;
+        opacity: 1;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <div class="h-full">
+      <header
+        class="fixed flex justify-center w-full top-0 left-0 mb-[80px] z-50 px-4 border-solid border-[#1e293b] border-b"
+      >
+        <nav
+          class="flex w-full items-center justify-between bg-[#0f172a] text-white p-3"
+        >
+          <div class="w-16">
+            <img
+              src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/f89b2662-103e-4d1a-b7d0-be7faf688586/thumb_BackendWeekly_logo.png"
+              alt="Backend Weekly Logo"
+            />
+          </div>
+
+          <div
+            class="flex-1 bg-[#0f172a] flex justify-center mx-5 bg-[#1e293b] rounded-md"
+          ></div>
+          <div class="justify-between my-3 gap-10 items-center hidden lg:flex">
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com"
+                class="flex gap-2'"
+              >
+                <span>Newsletter</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://masteringbackend.com/courses"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Courses</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com/c/products"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Products</span>
+              </a>
+            </div>
+
+            <span class="flex gap-10 items-center">
+              <div>
+                <a
+                  href="https://newsletter.masteringbackend.com"
+                  class="bg-secondary px-4 py-3 font-bold rounded-md text-[#fff]"
+                >
+                  Join 10K+ Engineers
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://app.masteringbackend.com/?ref=backend-weekly-website"
+                  target="_blank"
+                  class="border-secondary border border-outline px-4 py-3 font-bold rounded-md text-white"
+                >
+                  Learn Backend
+                </a>
+              </div>
+            </span>
+          </div>
+
+          <div class="lg:hidden block" @click="openSidebar()">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+                stroke="currentcolor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </nav>
+      </header>
+    </div>
+    
+<div class="py-20">
+  <header class="pt-20">
+    <div class="container max-w-screen-xl mx-auto p-4">
+      <!--Search input -->
+      <div class="md:max-w-[60%] mx-auto">
+        <div class="border-2 flex px-4 items-center py-3 rounded-lg">
+  <div class="w-6"><svg version="1.1" class="h-4 text-dark" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px" y="0px" viewBox="0 0 52.966 52.966" style="enable-background: new 0 0 52.966 52.966" xml:space="preserve">
+    <path d="M51.704,51.273L36.845,35.82c3.79-3.801,6.138-9.041,6.138-14.82c0-11.58-9.42-21-21-21s-21,9.42-21,21s9.42,21,21,21
+          c5.083,0,9.748-1.817,13.384-4.832l14.895,15.491c0.196,0.205,0.458,0.307,0.721,0.307c0.25,0,0.499-0.093,0.693-0.279
+          C52.074,52.304,52.086,51.671,51.704,51.273z M21.983,40c-10.477,0-19-8.523-19-19s8.523-19,19-19s19,8.523,19,19
+          S32.459,40,21.983,40z" />
+</svg></div>
+  <input
+    type="text"
+    class="w-full ml-2 border-none outline-none text-lg font-semibold bg-transparent"
+    placeholder="Search Help Center"
+  />
+</div>
+
+      </div>
+      <!--End Search input -->
+
+      <div class="max-w-[60%] md:max-w-screen-xl mt-4 text-white">
+  <ul class="flex">
+    <li class="text-gray-500">
+      <a class="text-md font-semibold" href="#">Help</a>
+    </li>
+    <li class="ml-2 font-semibold">/</li>
+    <li class="ml-2">
+      <a class="text-lg font-semibold" href="#">Start</a>
+    </li>
+  </ul>
+</div>
+
+    </div>
+  </header>
+
+  <section class="border-t-gray-800 border-t-2 text-white">
+    <div class="container max-w-screen-xl mx-auto px-4">
+      <div class="md:flex mt-8">
+        <!-- left-col -->
+<div class="border-r-2 flex-initial w-[20%]">
+  <ul class="mb-10">
+    <li class="mb-5 text-lg font-semibold">
+      <button>Start</button>
+    </li>
+    <li>
+      <a class="text-lg" href="#">Intro to paddle</a>
+    </li>
+    <li><a class="text-lg" href="#">Set up Paddle</a></li>
+    <li><a class="text-lg" href="#">Account Verification</a></li>
+  </ul>
+
+  <!-- Sell -->
+  <ul class="mb-10">
+    <li class="mb-5 text-lg font-semibold"><a href="#">Sell</a></li>
+    <li><a class="text-lg" href="#">Set up subscriptions</a></li>
+    <li><a class="text-lg" href="#">Invoicing Tool</a></li>
+    <li><a class="text-lg" href="#">Tax</a></li>
+  </ul>
+
+  <!-- Manage -->
+  <ul class="mb-10">
+    <li class="mb-5 text-lg font-semibold"><a href="#">Manage</a></li>
+    <li><a class="text-lg" href="#">Your customers</a></li>
+    <li><a class="text-lg" href="#">Reporting</a></li>
+    <li><a class="text-lg" href="#">Get Paid</a></li>
+    <li><a class="text-lg" href="#">PSD2</a></li>
+    <li><a class="text-lg" href="#">Risk Prevention</a></li>
+    <li><a class="text-lg" href="#">SDK</a></li>
+  </ul>
+
+  <!-- Grow-->
+  <ul class="mb-10">
+    <li class="mb-5 text-lg font-semibold"><a href="#">Grow</a></li>
+    <li><a class="text-lg" href="#">Affiliates</a></li>
+    <li><a class="text-lg" href="#">Upsell</a></li>
+    <li><a class="text-lg" href="#">Localisation</a></li>
+  </ul>
+
+  <!-- Legal-->
+  <ul class="mb-10">
+    <li class="mb-5 text-lg font-semibold"><a href="#">Legal</a></li>
+    <li><a class="text-lg" href="#">Sanctions</a></li>
+  </ul>
+</div>
+
+
+        <!-- Right-col -->
+        <div class="flex-initial w-[80%] text-white">
+          <div class="max-w-[70%] mx-auto">
+            <div>
+              <h1 class="md:text-5xl font-semibold mb-5">
+                Start
+              </h1>
+              
+<article class="text-white">
+  <p class="text-xl">
+    Are you looking into getting started with Paddle? You're in the right place.
+    In the "Start" category you will find everything you need to know about
+    Paddle to make an informed decision that we are the right fit for you and to
+    get started!
+  </p>
+
+  <ul class="mt-6">
+    <li>
+      <a class="underline text-xl" href="#">Intro to Contentre</a>
+    </li>
+    <li>
+      <a class="underline text-xl" href="#">Set up Contentre</a>
+    </li>
+    <li>
+      <a class="underline text-xl" href="#">Account Verification</a>
+    </li>
+  </ul>
+</article>
+
+            </div>
+
+            <div class="mt-20">
+  <div class="border-gray-400 border-2 rounded-lg bg-[#1E293B] text-white p-9">
+    <h5 class="text-center font-semibold mb-6 text-2xl">Need more help?</h5>
+    <p class="text-xl">
+      Login to your Contentre account to chat directly with our Seller Support
+      Team or…
+    </p>
+    <div class="flex justify-between md:justify-center mt-6">
+      <a class="bg-[#1e293b] rounded-xl border-2 py-2 px-6" href="#"
+        >Email us</a
+      >
+      <a class="md:ml-10 rounded-xl border-2 py-2 px-6" href="#"
+        >Connect via Twitter</a
+      >
+    </div>
+  </div>
+</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+  </body>
+</html>

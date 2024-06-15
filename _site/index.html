@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backend Weekly - Home</title>
+    <link rel="icon" type="image/png" href="/favicon.ico" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0f172a",
+              secondary: "#4F46E5",
+              tertiary: "#1e293b",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/night-owl.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+
+      let isSidebarOpen = false;
+
+      function openSidebar() {
+        isSidebarOpen = !isSidebarOpen;
+
+        const sidebarWrapper = document.querySelector("#sidebar_wrapper");
+        const sidebar = document.querySelector("#sidebar");
+        if (!sidebar) return;
+
+        if (isSidebarOpen) {
+          sidebar.classList.add("open", "navbar_drawer");
+          sidebar.classList.remove("overflow-y-auto");
+          sidebar.style.maxWidth = ""; //('max-width')
+        } else sidebar.classList.remove("open", "navbar_drawer");
+      }
+    </script>
+
+    <style>
+      .layer h3 {
+        bottom: 0;
+        left: 14%;
+        position: absolute;
+        transition: 0.5s;
+      }
+      .layer:hover h3 {
+        bottom: 10%;
+        opacity: 1;
+        color: white;
+      }
+    </style>
+  </head>
+
+  <body class="">
+    <div class="h-full">
+      <header
+        class="fixed flex justify-center w-full top-0 left-0 mb-[80px] z-50 px-4 border-solid border-[#1e293b] border-b"
+      >
+        <nav
+          class="flex w-full items-center justify-between bg-[#0f172a] text-white p-3"
+        >
+          <div class="w-16">
+            <img
+              src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/f89b2662-103e-4d1a-b7d0-be7faf688586/thumb_BackendWeekly_logo.png"
+              alt="Backend Weekly Logo"
+            />
+          </div>
+
+          <div
+            class="flex-1 bg-[#0f172a] flex justify-center mx-5 bg-[#1e293b] rounded-md"
+          ></div>
+          <div class="justify-between my-3 gap-10 items-center hidden lg:flex">
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com"
+                class="flex gap-2'"
+              >
+                <span>Newsletter</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://masteringbackend.com/courses"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Courses</span>
+              </a>
+            </div>
+
+            <div>
+              <a
+                href="https://newsletter.masteringbackend.com/c/products"
+                target="_blank"
+                class="flex gap-2'"
+              >
+                <span>Products</span>
+              </a>
+            </div>
+
+            <span class="flex gap-10 items-center">
+              <div>
+                <a
+                  href="https://newsletter.masteringbackend.com"
+                  class="bg-secondary px-4 py-3 font-bold rounded-md text-[#fff]"
+                >
+                  Join 10K+ Engineers
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://app.masteringbackend.com/?ref=backend-weekly-website"
+                  target="_blank"
+                  class="border-secondary border border-outline px-4 py-3 font-bold rounded-md text-white"
+                >
+                  Learn Backend
+                </a>
+              </div>
+            </span>
+          </div>
+
+          <div class="lg:hidden block" @click="openSidebar()">
+            <svg
+              focusable="false"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 5H20.359M3 18.186H20.359M3 11.592H20.359"
+                stroke="currentcolor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </nav>
+      </header>
+    </div>
+        
+
+<main class="">
+  <section class="bg-primary">
+    <div class="bg-primary flex flex-col max-w-7xl md:min-h-screen mx-auto items-center justify-evenly px-10 pt-20 md:pt-40
+        gap-x-10">
+      <div class="flex w-full flex-row items-center justify-evenly pt-[72px] mb-10">
+        <div class="flex flex-col md:mt-0">
+          <div class="mb-8 flex flex-col items-center space-y-3 md:items-start md:space-y-5">
+            <h1 class="text-3xl font-bold text-white sm:text-4xl lg:text-5xl">
+              Improve Your
+              <span class=" text-secondary">
+                Backend
+              </span>
+              <span class="pl-2">
+                Engineering Skills
+              </span>
+            </h1>
+            <div class="w-full text-center">
+              <p class="text-center text-xs font-medium uppercase text-gray-300 md:text-sm">
+                JOIN 10,000+ SUBSCRIBERS becoming Great BACKEND engineers EVERY WEEK
+              </p>
+            </div>
+          </div>
+          <div class="mx-auto w-full mb-10">
+            <iframe
+              src="https://embeds.beehiiv.com/a83d67f4-ee9c-44b5-aa62-eaa85847f2db?slim=true"
+              data-test-id="beehiiv-embed"
+              height="52"
+              frameborder="0"
+              scrolling="no"
+              style="margin: 0; border-radius: 0px !important; background-color: transparent; width:100%; border-radius: 0px
+                !important; background-color: transparent; border-radius: 0px !important; background-color: transparent; border-radius:
+                0px !important; background-color: transparent;"></iframe>
+          </div>
+          <div class="mb-10 flex flex-col items-center">
+            <div class="flex flex-col items-start space-y-3 text-white md:text-lg">
+              <div class="flex space-x-4">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 24 24"
+                    stroke-width="4"
+                    stroke="currentColor"
+                    class="h-7 w-7 text-green-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                </div>
+                <p class="">One practical tip every Saturday</p>
+              </div>
+              <div class="flex space-x-4">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 24 24"
+                    stroke-width="4"
+                    stroke="currentColor"
+                    class="h-7 w-7 text-green-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                </div>
+                <p>Backend best practices and actionable advice</p>
+              </div>
+              <div class="flex space-x-4">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 24 24"
+                    stroke-width="4"
+                    stroke="currentColor"
+                    class="h-7 w-7 text-green-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                </div>
+                <p>System Design deep dives and fresh ideas</p>
+              </div>
+              <div class="flex space-x-4">
+                <div>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewbox="0 0 24 24"
+                    stroke-width="4"
+                    stroke="currentColor"
+                    class="h-7 w-7 text-green-400">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5"></path>
+                  </svg>
+                </div>
+                <p>Databases deep dives and fresh ideas</p>
+              </div>
+            </div>
+          </div>
+          <div class="avatars  w-fit flex items-center container mx-auto flex-col text-center">
+            <div class="flex items-center gap-2 p-2">
+              <div class="flex items-center">
+                <img
+                  src="https://bootcamp.masteringbackend.com/people/agoro.jpeg"
+                  class="h-11 w-11 rounded-full border-4 border-white"/>
+                <img
+                  src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/testimonial/picture/a6b24fa5-d63a-4740-9ea2-73bf2e5fd353/unnamed.jpg"
+                  class="-ml-5 h-11 w-11 rounded-full border-4 border-white"/>
+                <img
+                  src="https://media.licdn.com/dms/image/D4E03AQElWXg4JIEOMw/profile-displayphoto-shrink_800_800/0/1669834773963?e=1723680000&v=beta&t=tfqaF4Y7uLEXSGjhim0tKSD8zkq8TtAo6f5XMjOoyb0"
+                  class="-ml-5 h-11 w-11 rounded-full border-4 border-white"/>
+                <img
+                  src="https://media.licdn.com/dms/image/D4D03AQEiHuoQ9-79qQ/profile-displayphoto-shrink_800_800/0/1672227614408?e=1723680000&v=beta&t=b292LCQJn4oNvkw7p463ExQJQyY9gYHGefKDZeh-l3s"
+                  class="-ml-5 h-11 w-11 rounded-full border-4 border-white"/>
+                <img
+                  src="https://bootcamp.masteringbackend.com/people/ashan.jpeg"
+                  class="-ml-5 h-11 w-11 rounded-full border-4 border-white"/>
+              </div>
+            </div>
+            <p class="text-white">Join thousands of backend software engineers
+            </p>
+          </div>
+        </div>
+        <div class="hidden md:flex md:flex-col md:items-center">
+          <div class="w-2/3">
+            <img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/c344877a-7be7-470e-83f4-fa5180741432/becoming_a_great_backend_engineer.png?t=1706354101"/>
+          </div>
+        </div>
+      </div>
+      <div class="testimonials w-full flex flex-col md:grid grid-cols-3 mt-5 gap-5 font-inter pb-20">
+        <div class=" p-3 bg-amber-red break-inside-avoid w-full mb-3 relative">
+          <div class="grid gap-2">
+            <p class="text-sm text-white italic">
+              “This has been helpful for me to understand some backend concepts aside from writing codes as I continue my journey in
+              backend development. THANK YOU, and I look forward to receiving more. Cheers”
+              <span class="font-bold text-lg">-- Oladimeji Abdullahi</span>
+            </p>
+          </div>
+        </div>
+        <div class=" p-3 bg-amber-red break-inside-avoid w-full mb-3 relative">
+          <div class="grid gap-2">
+            <p class="text-sm text-white italic">
+              “Very Insightful and helpful Piece. Thank you, and I look forward to more.”
+              <span class="font-bold text-lg">
+                -- Abdullahi Oladimeji</span>
+            </p>
+          </div>
+        </div>
+        <div class=" p-3 bg-amber-red break-inside-avoid w-full mb-3 relative">
+          <div class="grid gap-2">
+            <p class="text-sm text-white italic">
+              “I receive all your newsletters, and I enjoy the little I have read on Understanding System Design so far. Now, I plan
+              to spend 30 minutes—1 hour daily on your newsletters. I appreciate your impact!” --
+              <span class="font-bold text-lg">RollyJS</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="bg-white"></section></main>
+  </body>
+</html>

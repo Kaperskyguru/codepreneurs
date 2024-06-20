@@ -1,33 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-2Z0M2PV7CQ"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-2Z0M2PV7CQ");
-    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {{title | default: "Backend Weekly Newsletter"}} | Backend Weekly
+      {{title | default: "Turn your coding skils into income"}} | Codepreneurs
     </title>
-    <meta
-      name="keywords"
-      content="backend weekly, backend engineering tips, backend newsletter"
-    />
+
     <meta name="robots" content="index, follow" />
     <meta
       name="description"
-      content="The Backend Weekly is a newsletter that delivers 1 practical tip on Backend Engineering & software development that you can easily implement. Explaining complex concepts in Backend Engineering, sharing exclusive backend engineering resources, and helping you become a great Backend Engineer."
+      content="Join 10K+ readers of The Saturday Codepreneurs for tips, strategies, and resources to launch, grow, and monetize your coding skills."
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="og:type" content="website" />
@@ -35,21 +18,15 @@
     <meta name="twitter:creator" content="@kaperskyguru" />
     <meta
       name="og:description"
-      content="The Backend Weekly is a newsletter that delivers 1 practical tip on Backend Engineering & software development that you can easily implement. Explaining complex concepts in Backend Engineering, sharing exclusive backend engineering resources, and helping you become a great Backend Engineer."
+      content="Join 10K+ readers of The Saturday Codepreneurs for tips, strategies, and resources to launch, grow, and monetize your coding skills."
     />
-    <meta property="og:url" content="https://backendweekly.dev" />
+    <meta property="og:url" content="https://codepreneurs.dev" />
     <meta
       name="og:title"
-      content="{{title | default: 'Backend Weekly Newsletter'}} | Backend Weekly"
+      content="{{title | default: 'Turn your coding skils into income'}} | Codepreneurs"
     />
-    <meta
-      name="twitter:image"
-      content="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/publication/thumbnail/f89b2662-103e-4d1a-b7d0-be7faf688586/landscape_BackendWeekly_Design.png"
-    />
-    <meta
-      property="og:image"
-      content="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/publication/thumbnail/f89b2662-103e-4d1a-b7d0-be7faf688586/landscape_BackendWeekly_Design.png"
-    />
+    <meta name="twitter:image" content="/banner.png" />
+    <meta property="og:image" content="/banner.png" />
 
     <link rel="icon" type="image/png" href="/favicon.ico" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -103,22 +80,31 @@
         opacity: 1;
         color: white;
       }
+
+      article p {
+        padding: 0.6rem 0rem;
+        font-size: 1.5rem; /* 24px */
+        line-height: 2rem; /* 32px */
+      }
+
+      .message p {
+        padding: 1rem 0rem;
+      }
     </style>
   </head>
 
   <body class="">
     <div class="h-full">
       <header
-        class="fixed flex justify-center w-full top-0 left-0 mb-[80px] z-50 px-4 border-solid border-[#1e293b] border-b"
+        class="fixed flex justify-center w-full top-0 left-0 mb-[80px] z-50 border-solid border-[#1e293b] border-b"
       >
         <nav
           class="flex w-full items-center justify-between bg-[#0f172a] text-white p-3"
         >
-          <div class="w-16">
-            <img
-              src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/f89b2662-103e-4d1a-b7d0-be7faf688586/thumb_BackendWeekly_logo.png"
-              alt="Backend Weekly Logo"
-            />
+          <div class="w-16 text-2xl font-bold">
+            <span class="text-secondary">
+              <span class="text-3xl">&lt;</span>Code</span
+            >preneurs
           </div>
 
           <div
@@ -126,8 +112,21 @@
           ></div>
           <div class="justify-between my-3 gap-10 items-center hidden lg:flex">
             <div>
+              <a href="#about" class="flex gap-2'">
+                <span>About</span>
+              </a>
+            </div>
+
+            <div>
+              <a href="#" class="flex gap-2'">
+                <span>Articles</span>
+              </a>
+            </div>
+
+            <div>
               <a
-                href="https://newsletter.masteringbackend.com"
+                href="https://solomoneseme_dqhdug6pyy.bestregards.me/form_o64PbRYI4Eqiz831UUhOi?e=1"
+                target="_blank"
                 class="flex gap-2'"
               >
                 <span>Newsletter</span>
@@ -135,41 +134,27 @@
             </div>
 
             <div>
-              <a
-                href="https://masteringbackend.com/courses"
-                target="_blank"
-                class="flex gap-2'"
-              >
+              <a href="#" class="flex gap-2'">
                 <span>Courses</span>
-              </a>
-            </div>
-
-            <div>
-              <a
-                href="https://newsletter.masteringbackend.com/c/products"
-                target="_blank"
-                class="flex gap-2'"
-              >
-                <span>Products</span>
               </a>
             </div>
 
             <span class="flex gap-10 items-center">
               <div>
                 <a
-                  href="https://newsletter.masteringbackend.com"
-                  class="bg-secondary px-4 py-3 font-bold rounded-md text-[#fff]"
-                >
-                  Join 10K+ Engineers
-                </a>
-              </div>
-              <div>
-                <a
-                  href="https://app.masteringbackend.com/?ref=backend-weekly-website"
-                  target="_blank"
+                  href="#"
                   class="border-secondary border border-outline px-4 py-3 font-bold rounded-md text-white"
                 >
-                  Learn Backend
+                  Login
+                </a>
+              </div>
+
+              <div>
+                <a
+                  href="https://newsletter.masteringbackend.com/c/products"
+                  class="bg-secondary px-4 py-3 font-bold rounded-md text-[#fff]"
+                >
+                  Join 10K+ Subscribers
                 </a>
               </div>
             </span>
